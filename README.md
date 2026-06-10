@@ -10,25 +10,28 @@ It demonstrates an end-to-end workflow:
 
 ### Architecture
 
-GitHub Repository
-        │
-        │  (GitHub Actions CI Pipeline)
-        ▼
-Docker Image (DockerHub: rashmitha0705/go-web-app)
-        │
-        ▼
-AWS EKS Cluster (Kubernetes)
-        │
-        ├── Helm Chart Deployment
-        │
-        ▼
-ArgoCD (GitOps Controller)
-        │
-        ▼
-Go Web Application (Pods + Service)
-        │
-        ▼
-Access via External IP (/home, /courses)
+CI/CD FLOW
+
+GitHub Repo
+   ↓
+GitHub Actions
+   ↓
+Docker Build & Push
+   ↓
+AWS EKS Cluster
+   ↓
+ArgoCD (GitOps)
+   ↓
+Helm Deployment
+   ↓
+Go Web App (Kubernetes Pods)
+   ↓
+External IP Access (/home, /courses)
+
+### Application Screenshots 
+
+![Home](images/home.png)
+### How to Access the Application
 
 ### Tech Stack
 
@@ -41,7 +44,6 @@ Access via External IP (/home, /courses)
 ⚙️ GitHub Actions – CI pipeline
 🧰 eksctl – EKS cluster creation
 
-### How to Access the Application
 
 Once deployed on EKS, the application is exposed using a LoadBalancer service.
 
