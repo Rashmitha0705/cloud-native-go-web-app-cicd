@@ -53,18 +53,30 @@ http://<EXTERNAL-IP>/courses
 
 ✔ Access is only possible via External IP (not localhost)
 
-### GitHub Actions (CI Pipeline)
-Where to see it:
 
 ### GitHub Repository → Actions tab
 
-CI Pipeline does:
-Checkout code
-Build Go application
-Build Docker image
-Push image to DockerHub
-Update Helm chart
-Trigger ArgoCD sync
+- CI Pipeline does:
+- Checkout code
+- Build Go application
+- Build Docker image
+- Push image to DockerHub
+- Update Helm chart
+- Trigger ArgoCD sync
+
+### Security & Secrets Management
+
+### GitHub Actions Secrets
+
+The CI/CD pipeline uses GitHub Actions Secrets to securely store and access:
+
+DockerHub Username
+DockerHub Access Token
+AWS Access Key ID
+AWS Secret Access Key
+AWS Region Configuration
+
+These secrets are injected into the GitHub Actions workflow at runtime and are never exposed in the repository. 
 
 ### Docker Commands
 - docker build -t rashmitha0705/go-web-app:v1 .
@@ -92,4 +104,5 @@ Trigger ArgoCD sync
 - GitOps workflow using ArgoCD
 - Helm-based application deployment
 - Docker image versioning and automation
+- Secure secrets management using GitHub Actions Secrets
 - Cloud-native architecture understanding
