@@ -33,7 +33,7 @@ jobs:
       run: go test ./...
   
 code-quality:
-  runs-on: ubuntu-latest
+  runs-on: ubuntu-latestgit status
 
   steps:
     - name: Checkout repository
@@ -42,14 +42,19 @@ code-quality:
     - name: Set up Go
       uses: actions/setup-go@v5
       with:
-        go-version: '1.22'
+        go-version: '1.22.5'
         cache: true
 
     - name: Run golangci-lint
       uses: golangci/golangci-lint-action@v6
       with:
         version: v1.59.1
+        skip-cache: true
         args: --timeout=5m
+
+
+
+
 
   update-newtag-in-helm-chart:
     runs-on: ubuntu-latest
