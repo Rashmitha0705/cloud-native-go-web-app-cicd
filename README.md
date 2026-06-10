@@ -67,29 +67,29 @@ Update Helm chart
 Trigger ArgoCD sync
 
 ### Docker Commands
-docker build -t rashmitha0705/go-web-app:v1 .
-docker push rashmitha0705/go-web-app:v1
-docker run -p 8080:8080 rashmitha0705/go-web-app:v1
+- docker build -t rashmitha0705/go-web-app:v1 .
+- docker push rashmitha0705/go-web-app:v1
+- docker run -p 8080:8080 rashmitha0705/go-web-app:v1
 ### Kubernetes Commands
-kubectl get pods
-kubectl get svc
-kubectl get nodes -o wide
-kubectl describe pod <pod-name>
-kubectl logs <pod-name>
+- kubectl get pods
+- kubectl get svc
+- kubectl get nodes -o wide
+- kubectl describe pod <pod-name>
+- kubectl logs <pod-name>
 
 ### CI/CD Flow Explanation (Simple Understanding)
-Developer pushes code to GitHub
-GitHub Actions builds Docker image
-Image is pushed to DockerHub
-ArgoCD detects changes in Git repo
-Helm deploys updated version to EKS
-Application is automatically updated
+- Developer pushes code to GitHub
+- GitHub Actions builds Docker image
+- Image is pushed to DockerHub
+- ArgoCD detects changes in Git repo
+- Helm deploys updated version to EKS
+-  Application is automatically updated
 
 
 ### Key Learnings
-Real-world CI/CD pipeline design
-Kubernetes deployment on AWS EKS
-GitOps workflow using ArgoCD
-Helm-based application deployment
-Docker image versioning and automation
-Cloud-native architecture understanding
+- Real-world CI/CD pipeline design
+- Kubernetes deployment on AWS EKS
+- GitOps workflow using ArgoCD
+- Helm-based application deployment
+- Docker image versioning and automation
+- Cloud-native architecture understanding
