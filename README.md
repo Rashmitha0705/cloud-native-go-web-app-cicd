@@ -30,7 +30,7 @@ External IP Access (/home, /courses)
 
 ### Application Screenshots 
 
-![Home](images/home.png)
+![Home](Screenshot)
 ### How to Access the Application
 
 ### Tech Stack
